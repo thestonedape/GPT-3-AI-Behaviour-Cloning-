@@ -3,7 +3,6 @@ import openai
 import streamlit as st
 openai.api_key = st.secrets["SECRET_KEY"]
 
-height = st.slider("Height", 1, 10, 5)
 st.title('The Stoned Ape')
 
 st.text('This is an experiment of prompt designing by using GPT-3, a neural network trained and hosted by OpenAI.')
@@ -18,7 +17,7 @@ response = openai.Completion.create(
     presence_penalty=0
     )
 st.text('Output:')
-response.markdown("""<span style="word-wrap:break-word;">MVLSEGEWQLVLHVWAKVEADVAGHGQDILIRLFKSHPETLEKFDRFKHLKTEAEMK
-                ASEDLKKHGVTVLTALGAILKKKGHHEAELKPLAQSHATKHKIPIKYLEFISEAIIHV
-                LHSRHPGNFGADAQGAMNKALELFRKDIAAKYKELGYQG</span>""", unsafe_allow_html=True)
+loooong_text = ' '.join([response]*1_000)
+st.markdown("st.markdown : " + loooong_text)
 st.text(response["choices"][0]["text"])
+
