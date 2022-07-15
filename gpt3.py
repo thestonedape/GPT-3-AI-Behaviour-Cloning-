@@ -9,7 +9,6 @@ st.text('This is an experiment of prompt designing by using GPT-3, a neural netw
 prompt_text = st.text_input(label="Ask something...", value="Add here few words")
 response = openai.Completion.create(
     engine="davinci-instruct-beta-v3",
-    prompt=prompt_text,
     max_tokens=500,
     prompt="Expand the blog section in to a detailed professional , witty and clever explanation.\n\n {}".format(prompt_text),
     temperature=0.7,
