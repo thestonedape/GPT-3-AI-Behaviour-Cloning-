@@ -7,6 +7,7 @@ streamlit_style = """
 
 			html, body, [class*="css"]  {
 			font-family: 'Roboto', sans-serif;
+            color: white;
 			}
 			</style>
 			"""
