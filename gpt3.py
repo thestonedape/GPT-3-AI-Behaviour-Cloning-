@@ -6,7 +6,7 @@ openai.api_key = st.secrets["SECRET_KEY"]
 st.title('The Stoned Ape')
 
 st.text('This is an experiment of prompt designing by using GPT-3, a neural network trained and hosted by OpenAI.')
-prompt_text = st.text_input(label="Ask something...", value="Add your detailed explanation here.")
+prompt_text = st.text_input(label="Ask something...")
 response = openai.Completion.create(
     engine="davinci-instruct-beta-v3",
     max_tokens=500,
