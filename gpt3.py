@@ -4,7 +4,6 @@ import streamlit as st
 openai.api_key = st.secrets["SECRET_KEY"]
 
 height = st.slider("Height", 1, 10, 5)
-width = 
 st.title('The Stoned Ape')
 
 st.text('This is an experiment of prompt designing by using GPT-3, a neural network trained and hosted by OpenAI.')
