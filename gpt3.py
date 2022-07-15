@@ -17,6 +17,6 @@ response = openai.Completion.create(
     presence_penalty=0
     )
 st.text('Output:')
-loooong_text = ' '.join([response]*1_000)
-st.text(response["choices"][0]["text"] + loooong_text)
+
+st.text(response["choices"][0]["text"])
 
