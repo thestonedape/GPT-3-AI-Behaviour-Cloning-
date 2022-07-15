@@ -17,6 +17,5 @@ response = openai.Completion.create(
     presence_penalty=0
     )
 st.text('Output:')
-
 st.text(response["choices"][0]["text"])
 
