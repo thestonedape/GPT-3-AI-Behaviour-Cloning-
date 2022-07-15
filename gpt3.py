@@ -1,8 +1,17 @@
 
 import openai
 import streamlit as st
-#theme
-st.set_theme('white')
+streamlit_style = """
+			<style>
+			@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap');
+
+			html, body, [class*="css"]  {
+			font-family: 'Roboto', sans-serif;
+			}
+			</style>
+			"""
+st.markdown(streamlit_style, unsafe_allow_html=True)
+
 
 openai.api_key = st.secrets["SECRET_KEY"]
 
