@@ -16,5 +16,5 @@ response = openai.Completion.create(
     presence_penalty=0
     )
 st.text('Output:')
-st.markdown(response["choices"][0]["text"]*10)
+st.markdown(response["choices"][0]["text"]*1)
 
