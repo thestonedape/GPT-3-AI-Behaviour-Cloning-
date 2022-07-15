@@ -1,9 +1,9 @@
-from tkinter import font
+
 import openai
 import streamlit as st
 #theme
 st.set_theme('white')
-font = font.Font(family='Roboto', size=18, weight='bold')
+
 openai.api_key = st.secrets["SECRET_KEY"]
 
 st.title('The Stoned Ape')
