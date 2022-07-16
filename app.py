@@ -46,3 +46,4 @@ st.markdown("""
 			<h3>Beta Version</h3>
 			<p>Still in development. Bugs will be fixed soon.</p>
             """)
+st.markdown(""" <p>This is a beta version of the app. It is still in development. Bugs will be fixed soon.</p>""")
