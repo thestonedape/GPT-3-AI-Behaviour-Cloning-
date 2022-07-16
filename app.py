@@ -10,7 +10,7 @@ streamlit_style = """
 			}
 			</style>
 			"""
-st.markdown(streamlit_style, unsafe_allow_html=False)
+st.markdown(streamlit_style, unsafe_allow_html=True)
 
 
 openai.api_key = st.secrets["SECRET_KEY"]
