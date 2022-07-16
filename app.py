@@ -15,6 +15,7 @@ st.markdown(streamlit_style, unsafe_allow_html = True)
 openai.api_key = st.secrets["SECRET_KEY"]
 
 st.title('The Stoned Ape')
+st.caption('Backed by Inside Labs')
 
 st.markdown('This is an experiment of prompt designing by using GPT-3(a transformer model), a neural network trained and hosted by OpenAI.')
 st.markdown('Tips: Try to ask specific detaied questions, like "Who are you?')
@@ -34,5 +35,3 @@ st.text('Output:')
 if st.button('Generate'):
     st.markdown(response["choices"][0]["text"]*1)
 
-st.text('Backed by Inside Labs')
-st.text('insidelibrary.weebly.com')
