@@ -31,6 +31,8 @@ response = openai.Completion.create(
     )
 st.text('Output:')
 #on click, the response is displayed
-st.markdown_output(response["choices"][0]["text"])
+
+if st.button('Generate'):
+    st.markdown(response["choices"][0]["text"])
 
 
