@@ -2,7 +2,7 @@ import openai
 import streamlit as st
 streamlit_style = """
 			<style>
-			@import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap" rel="stylesheet');
+            @import url('https://fonts.googleapis.com/css2?family=Cutive+Mono&display=swap');
 
 			html, body, [class*="css"]  {
 			font-family: 'Cutive Mono', monospace;
