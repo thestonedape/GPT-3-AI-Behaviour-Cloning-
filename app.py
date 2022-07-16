@@ -12,6 +12,14 @@ streamlit_style = """
 st.markdown(streamlit_style, unsafe_allow_html = True)
 
 openai.api_key = st.secrets["SECRET_KEY"]
+#toggle button to witch between dark and light mode
+if st.button("Toggle Theme"):
+	if st.checkbox("Dark Mode"):
+		st.markdown("<style>body { background-color: #1a1a1a; color: #fff; }</style>", unsafe_allow_html = True)
+	else:
+		st.markdown("<style>body { background-color: #fff; color: #1a1a1a; }</style>", unsafe_allow_html = True)
+#right top corner button position
+        
 st.title('The Stoned Ape')
 st.caption('Backed by Inside Labs')
 
