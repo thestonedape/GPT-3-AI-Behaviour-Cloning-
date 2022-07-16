@@ -9,7 +9,7 @@ streamlit_style = """
 			}
 			</style>
 			"""
-st.markdown(streamlit_style, unsafe_allow_html = False)
+st.markdown(streamlit_style, unsafe_allow_html = True)
 
 
 openai.api_key = st.secrets["SECRET_KEY"]
@@ -32,6 +32,6 @@ st.text('Output:')
 #on click, the response is displayed
 
 if st.button('Generate'):
-    st.markdown(response["choices"][0]["text"])
+    st.markdown(response["choices"][0]["text"]*1)
 
 
