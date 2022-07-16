@@ -41,9 +41,10 @@ st.text('Output:')
 
 if st.button('Generate'):
     st.markdown(response["choices"][0]["text"]*1)
-st.markdown("""
+streamlit_c = """
 			<div style="background-color: #f5f5f5; padding: 10px; border-radius: 5px;">
 			<h3>Beta Version</h3>
 			<p>Still in development. Bugs will be fixed soon.</p>
-            """)
-st.markdown(""" <p>This is a beta version of the app. It is still in development. Bugs will be fixed soon.</p>""")
+            """
+st.markdown(streamlit_c, unsafe_allow_html = True)
+
