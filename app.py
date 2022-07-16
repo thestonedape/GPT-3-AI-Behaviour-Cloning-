@@ -12,7 +12,6 @@ streamlit_style = """
 st.markdown(streamlit_style, unsafe_allow_html = True)
 
 openai.api_key = st.secrets["SECRET_KEY"]
-st.page_icon=('🖖')
 st.title('The Stoned Ape')
 st.caption('Backed by Inside Labs')
 
