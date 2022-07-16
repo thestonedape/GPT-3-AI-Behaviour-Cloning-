@@ -23,7 +23,6 @@ openai.api_key = st.secrets["SECRET_KEY"]
 
         
 st.title('The Stoned Ape')
-st.caption('Still in development.')
 st.caption('Backed by Inside Labs')
 
 st.markdown('This is an experiment of prompt designing by using GPT-3(A Transformer based model), a neural network trained and hosted by OpenAI.')
@@ -39,9 +38,7 @@ response = openai.Completion.create(
     presence_penalty=0
     )
 st.text('Output:')
-#on click, the response is displayed
+
 
 if st.button('Generate'):
     st.markdown(response["choices"][0]["text"]*1)
-#button at the bottom of the page
-
