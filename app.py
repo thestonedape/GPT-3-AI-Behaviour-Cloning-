@@ -13,7 +13,6 @@ st.markdown(streamlit_style, unsafe_allow_html = True)
 
 openai.api_key = st.secrets["SECRET_KEY"]
 st.set_page_config(page_title='The Stoned Ape', page_icon='🖖')
-st.title('The Stoned Ape')
 st.caption('Backed by Inside Labs')
 
 st.markdown('This is an experiment of prompt designing by using GPT-3(a transformer model), a neural network trained and hosted by OpenAI.')
