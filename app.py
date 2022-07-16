@@ -6,7 +6,6 @@ streamlit_style = """
 
 			html, body, [class*="css"]  {
 			font-family: 'Cutive Mono', monospace;
-            color: white;
 			}
 			</style>
 			"""
