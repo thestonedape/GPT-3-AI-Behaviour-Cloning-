@@ -15,9 +15,9 @@ openai.api_key = st.secrets["SECRET_KEY"]
 #toggle button to witch between dark and light mode
 if st.button("Toggle Theme"):
 	if st.checkbox("Dark Mode"):
-		st.markdown("<style>body {color: white;}</style>", unsafe_allow_html = True)
-	else:
 		st.markdown("<style>body {color: black;}</style>", unsafe_allow_html = True)
+	else:
+		st.markdown("<style>body {color: white;}</style>", unsafe_allow_html = True)
 
 
         
