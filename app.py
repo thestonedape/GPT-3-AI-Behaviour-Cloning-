@@ -12,8 +12,11 @@ streamlit_style = """
 st.markdown(streamlit_style, unsafe_allow_html = True)
 
 openai.api_key = st.secrets["SECRET_KEY"]
-#toggle button to witch between dark and light mode
-st.sidebar.title("Style")
+#text on the bottom position of the page
+
+
+
+
 
 
 
@@ -38,4 +41,8 @@ st.text('Output:')
 
 if st.button('Generate'):
     st.markdown(response["choices"][0]["text"]*1)
-
+st.markdown("""
+			<div style="background-color: #f5f5f5; padding: 10px; border-radius: 5px;">
+			<h3>Beta Version</h3>
+			<p>Still in development. Bugs will be fixed soon.</p>
+            """)
