@@ -1,5 +1,4 @@
 <div align="center"> 
-  <img src="https://github.com/Its-Nishant-01/vibing/blob/master/app/src/main/res/drawable/lomgo.png" alt="WebBadge" border="0" height='150'>
   <h1 align ="center">Stoned Ape</h1>
  
   <img src="https://img.shields.io/badge/-Python-red">
