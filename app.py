@@ -13,11 +13,27 @@ st.markdown(streamlit_style, unsafe_allow_html = True)
 
 openai.api_key = st.secrets["SECRET_KEY"]
 #toggle button to witch between dark and light mode
-if st.button("Toggle Theme"):
-	if st.checkbox("Dark Mode"):
-		st.markdown("<style>body {color: black;}</style>", unsafe_allow_html = True)
-	else:
-		st.markdown("<style>body {color: white;}</style>", unsafe_allow_html = True)
+st.sidebar.title("Style")
+style = st.sidebar.selectbox("Select a style", ["Dark", "Light"])
+if style == "Dark":
+    st.markdown("""
+            <style>
+            body {
+            background-color: #1a1a1a;
+            color: white;
+            }
+            </style>
+            """, unsafe_allow_html = True)
+elif style == "Light":
+    st.markdown("""
+            <style>
+            body {
+            background-color: #f0f0f0;
+            color: black;
+            }
+            </style>
+            """, unsafe_allow_html = True)
+            
 
 
         
