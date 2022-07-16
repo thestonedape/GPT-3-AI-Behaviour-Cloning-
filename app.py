@@ -1,3 +1,4 @@
+from tkinter import N
 import openai
 import streamlit as st
 streamlit_style = """
@@ -22,6 +23,7 @@ openai.api_key = st.secrets["SECRET_KEY"]
 
         
 st.title('The Stoned Ape')
+st.caption('Still in development.')
 st.caption('Backed by Inside Labs')
 
 st.markdown('This is an experiment of prompt designing by using GPT-3(A Transformer based model), a neural network trained and hosted by OpenAI.')
@@ -41,10 +43,5 @@ st.text('Output:')
 
 if st.button('Generate'):
     st.markdown(response["choices"][0]["text"]*1)
-streamlit_c = """
-			<div style="padding: 10px; border-radius: 5px;">
-			<h3>Beta Version</h3>
-			<p>Still in development. Bugs will be fixed soon.</p>
-            """
-st.markdown(streamlit_c, unsafe_allow_html = True)
+#button at the bottom of the page
 
