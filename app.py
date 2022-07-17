@@ -47,5 +47,3 @@ if st.button('Generate'):
 
 
 
-a_link = st.multiselect('Select a link', ['https://insidelibrary.weebly.com'])
-st.markdown('<a href="{}">{}</a>'.format(a_link[0], a_link[0]), unsafe_allow_html=True)
