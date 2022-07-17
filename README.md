@@ -1,5 +1,5 @@
 <div align="center"> 
-  <h1 align ="center">Stoned Ape</h1>
+  <h1 align ="center">Stoned Ape AI</h1>
  
   <img src="https://img.shields.io/badge/-Python-red"></div>
 
