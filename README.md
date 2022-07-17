@@ -7,4 +7,4 @@ This is an experiment in what one might call "prompt engineering", which is a wa
 
 Project Link :
 
-<href="//thestonedape-stoned-ape-app-jw2mtm.streamlitapp.com"> Stoned Ape AI</a>
+<href="https://thestonedape-stoned-ape-app-jw2mtm.streamlitapp.com"> Stoned Ape AI</a>
