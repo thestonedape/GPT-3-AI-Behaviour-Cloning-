@@ -40,15 +40,6 @@ response = openai.Completion.create(
     )
 st.text('Output:')
 
-#select the response
-st.write(response.choices[0].text)
-st.write(response.choices[1].text)
-st.write(response.choices[2].text)
-st.write(response.choices[3].text)
-st.write(response.choices[4].text)
-st.write(response.choices[5].text)
-
-
 if st.button('Generate'):
     st.markdown(response["choices"][0]["text"]*1)
     
