@@ -42,14 +42,26 @@ st.text('Output:')
 
 if st.button('Generate'):
     st.markdown(response["choices"][0]["text"]*1)
-    
-#CHOICE = st.selectbox('Select a response', response["choices"])
-#st.markdown(CHOICE["text"])
-#st.write(CHOICE["text"])
+
 st.selectbox('Select a response', response["choices"])
-st.write(response["choices"][0]["text"])
-st.write(response["choices"][1]["text"])
-st.write(response["choices"][2]["text"])
-
-
+st.text('Output:')
+st.markdown(response["choices"][0]["text"]*1)
+st.text('Output:')
+st.markdown(response["choices"][1]["text"]*1)
+st.text('Output:')
+st.markdown(response["choices"][2]["text"]*1)
+st.text('Output:')
+st.markdown(response["choices"][3]["text"]*1)
+st.text('Output:')
+st.markdown(response["choices"][4]["text"]*1)
+st.text('Output:')
+st.markdown(response["choices"][5]["text"]*1)
+st.text('Output:')
+st.markdown(response["choices"][6]["text"]*1)
+st.text('Output:')
+st.markdown(response["choices"][7]["text"]*1)
+st.text('Output:')
+st.markdown(response["choices"][8]["text"]*1)
+st.text('Output:')
+st.markdown(response["choices"][9]["text"]*1)st.ma
 
