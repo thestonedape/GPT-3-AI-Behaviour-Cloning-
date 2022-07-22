@@ -40,9 +40,6 @@ response = openai.Completion.create(
     )
 st.text('Output:')
 
-if st.button('Generate'):
-    st.markdown(response["choices"][0]["text"]*1)
-
 st.selectbox('Select a response', response["choices"])
 st.text('Denk')
 st.markdown(response["choices"][0]["text"]*1)
@@ -57,5 +54,8 @@ st.markdown(response["choices"][4]["text"]*1)
 st.text('Bengali')
 st.markdown(response["choices"][5]["text"]*1)
 st.text('Marathi')
+
+if st.button('Generate'):
+    st.markdown(response["choices"][0]["text"]*1)
 
 
