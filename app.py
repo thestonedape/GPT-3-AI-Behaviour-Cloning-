@@ -61,7 +61,6 @@ st.text('[Inside Labs](https://insidelibrary.weebly.com/)')
 st.text('[GPT-3](https://openai.com/blog/gpt-3/)')
 st.text('[Inside Labs](https://insidelibrary.weebly.com/)')
 st.text('[GPT-3](https://openai.com/blog/gpt-3/)')
-st.text('[Inside Labs](https://insidelibrary.
 
 
 if st.button('Generate'):
