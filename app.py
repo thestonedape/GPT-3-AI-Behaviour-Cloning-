@@ -63,5 +63,5 @@ st.markdown(response["choices"][7]["text"]*1)
 st.text('Output:')
 st.markdown(response["choices"][8]["text"]*1)
 st.text('Output:')
-st.markdown(response["choices"][9]["text"]*1)st.ma
+st.markdown(response["choices"][9]["text"]*1)
 
