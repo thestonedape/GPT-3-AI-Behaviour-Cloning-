@@ -24,7 +24,7 @@ openai.api_key = st.secrets["SECRET_KEY"]
         
 st.title('The Stoned Ape')
 st.caption('Still in development.')
-st.caption('Backed by [Inside Labs](https://insidelibrary.weebly.com/)')
+
 
 st.markdown('This is an experiment of prompt designing by using GPT-3(A Transformer based model), a neural network trained and hosted by OpenAI.')
 st.caption('Tips: Try to ask specific detaied questions, like "Who are you?"')
