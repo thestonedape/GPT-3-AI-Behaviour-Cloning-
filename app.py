@@ -44,7 +44,7 @@ if st.button('Generate'):
     st.markdown(response["choices"][0]["text"]*1)
 
 st.selectbox('Select a response', response["choices"])
-st.text('Output:')
+st.text('Denk')
 st.markdown(response["choices"][0]["text"]*1)
 st.text('Chad')
 st.markdown(response["choices"][1]["text"]*1)
