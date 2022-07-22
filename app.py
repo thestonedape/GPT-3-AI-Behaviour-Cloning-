@@ -64,17 +64,17 @@ option = st.selectbox(
      'Choose the behaviour of Stoned Ape.',
      ('Chad', 'PlayBoy', 'Denk'))
 
-st.button('Generate')
+if st.button('Generate'):
 
-if option == 'Chad':
+ if option == 'Chad':
     st.text('How u doin?')
     st.markdown(response1["choices"][0]["text"]*1)
 
-if option == 'PlayBoy':
+ if option == 'PlayBoy':
     st.text('Yo!!')
     st.markdown(response2["choices"][0]["text"]*1)
 
-if option == 'Denk':
+ if option == 'Denk':
     st.text('Yo!!')
     st.markdown(response2["choices"][0]["text"]*1)
 
