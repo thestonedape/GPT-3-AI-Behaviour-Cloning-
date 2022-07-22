@@ -39,28 +39,14 @@ response = openai.Completion.create(
     presence_penalty=0
     )
 st.text('Output:')
-st.selectbox('Select a response', response["choices"])
-st.text('Source:')
-st.text('[OpenAI](https://openai.com/)')
-st.text('[GPT-3](https://openai.com/blog/gpt-3/)')
-st.text('[Inside Labs](https://insidelibrary.weebly.com/)')
-st.text('[GPT-3](https://openai.com/blog/gpt-3/)')
-st.text('[Inside Labs](https://insidelibrary.weebly.com/)')
-st.text('[GPT-3](https://openai.com/blog/gpt-3/)')
-st.text('[Inside Labs](https://insidelibrary.weebly.com/)')
-st.text('[GPT-3](https://openai.com/blog/gpt-3/)')
-st.text('[Inside Labs](https://insidelibrary.weebly.com/)')
-st.text('[GPT-3](https://openai.com/blog/gpt-3/)')
-st.text('[Inside Labs](https://insidelibrary.weebly.com/)')
-st.text('[GPT-3](https://openai.com/blog/gpt-3/)')
-st.text('[Inside Labs](https://insidelibrary.weebly.com/)')
-st.text('[GPT-3](https://openai.com/blog/gpt-3/)')
-st.text('[Inside Labs](https://insidelibrary.weebly.com/)')
-st.text('[GPT-3](https://openai.com/blog/gpt-3/)')
-st.text('[Inside Labs](https://insidelibrary.weebly.com/)')
-st.text('[GPT-3](https://openai.com/blog/gpt-3/)')
-st.text('[Inside Labs](https://insidelibrary.weebly.com/)')
-st.text('[GPT-3](https://openai.com/blog/gpt-3/)')
+
+option = st.selectbox(
+     'How would you like to be contacted?',
+     ('Email', 'Home phone', 'Mobile phone'))
+
+st.write('You selected:', option)
+
+    
 
 
 if st.button('Generate'):
