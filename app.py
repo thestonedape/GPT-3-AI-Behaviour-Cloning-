@@ -58,7 +58,7 @@ response3 = openai.Completion.create(
     )
 
 st.text('Output:')
-st.button('Generate')
+
 
 option = st.selectbox(
      'Choose the behaviour of Stoned Ape.',
