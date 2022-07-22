@@ -66,13 +66,13 @@ option = st.selectbox(
 
 if st.button('Generate'):
     if option == 'Chad':
-        st.text(response1.choices[0].text)
+        st.markdown(response1.choices[0].text)
     elif option == 'PlayBoy':
-        st.text(response2.choices[0].text)
+        st.markdown(response2.choices[0].text)
     elif option == 'Denk':
-        st.text(response3.choices[0].text)
+        st.markdown(response3.choices[0].text)
     else:
-        st.text('Please select an option.')
+        st.markdown('Please select an option.')
 
 
 
