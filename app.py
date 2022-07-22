@@ -40,6 +40,43 @@ response = openai.Completion.create(
     )
 st.text('Output:')
 
+#select the response
+if st.button('Select Response'):
+    st.text(response.choices[0].text)
+    st.text(response.choices[1].text)
+    st.text(response.choices[2].text)
+    st.text(response.choices[3].text)
+    st.text(response.choices[4].text)
+    st.text(response.choices[5].text)
+    st.text(response.choices[6].text)
+    st.text(response.choices[7].text)
+    st.text(response.choices[8].text)
+    st.text(response.choices[9].text)
+    st.text(response.choices[10].text)
+    st.text(response.choices[11].text)
+    st.text(response.choices[12].text)
+    st.text(response.choices[13].text)
+    st.text(response.choices[14].text)
+    st.text(response.choices[15].text)
+    st.text(response.choices[16].text)
+    st.text(response.choices[17].text)
+    st.text(response.choices[18].text)
+    st.text(response.choices[19].text)
+    st.text(response.choices[20].text)
+    st.text(response.choices[21].text)
+    st.text(response.choices[22].text)
+    st.text(response.choices[23].text)
+    st.text(response.choices[24].text)
+    st.text(response.choices[25].text)
+    st.text(response.choices[26].text)
+    st.text(response.choices[27].text)
+    st.text(response.choices[28].text)
+    st.text(response.choices[29].text)
+    st.text(response.choices[30].text)
+    st.text(response.choices[31].text)
+    st.text(response.choices[32].text)
+    st.text
+
 
 if st.button('Generate'):
     st.markdown(response["choices"][0]["text"]*1)
