@@ -29,10 +29,10 @@ st.caption('Backed by [Inside Labs](https://insidelibrary.weebly.com/)')
 st.markdown('This is an experiment of prompt designing by using GPT-3(A Transformer based model), a neural network trained and hosted by OpenAI.')
 st.caption('Tips: Try to ask specific detaied questions, like "Who are you?"')
 prompt_text = st.text_input(label="Input" , value="Ask me anything!")
-response = openai.Completion.create(
+response1 = openai.Completion.create(
     engine="davinci-instruct-beta-v3",
     max_tokens=500,
-    prompt="Expand the prompt text in to a detailed philosophical and creative explanation.\n\n {}".format(prompt_text),
+    prompt="Expand the prompt text in to a creative chad and dank manner.\n\n {}".format(prompt_text),
     temperature=0.8,
     top_p=1,
     frequency_penalty=0,
@@ -41,15 +41,32 @@ response = openai.Completion.create(
 st.text('Output:')
 
 option = st.selectbox(
-     'How would you like to be contacted?',
-     ('Email', 'Home phone', 'Mobile phone'))
+     'Choose the behaviour of Stoned Ape.',
+     ('Chad', 'PlayBoy', 'Denk'))
 
-st.write('You selected:', option)
+if option == 'Chad':
+    email = st.text_input(label="Chad")
+    st.text('How u doin?')
+    st.button('Generate')
+    st.markdown(response1["choices"][0]["text"]*1)
 
-    
+response2 = openai.Completion.create(
+    engine="davinci-instruct-beta-v3",
+    max_tokens=500,
+    prompt="Expand the prompt text Playboy response.\n\n {}".format(prompt_text),
+    temperature=0.8,
+    top_p=1,
+    frequency_penalty=0,
+    presence_penalty=0
+    )
+st.text('Output:')
+if option == 'PlayBoy':
+    email = st.text_input(label="PlayBoy")
+    st.text('Yo!!')
+    st.button('Generate')
+    st.markdown(response2["choices"][0]["text"]*1)
 
 
-if st.button('Generate'):
-    st.markdown(response["choices"][0]["text"]*1)
+
 
 
