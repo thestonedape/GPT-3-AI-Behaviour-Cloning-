@@ -38,6 +38,25 @@ response1 = openai.Completion.create(
     frequency_penalty=0,
     presence_penalty=0
     )
+response2 = openai.Completion.create(
+    engine="davinci-instruct-beta-v3",
+    max_tokens=500,
+    prompt="Expand the prompt text Playboy response.\n\n {}".format(prompt_text),
+    temperature=0.8,
+    top_p=1,
+    frequency_penalty=0,
+    presence_penalty=0
+    )    
+response3 = openai.Completion.create(
+    engine="davinci-instruct-beta-v3",
+    max_tokens=500,
+    prompt="Expand the prompt text funny Dank and roasting response.\n\n {}".format(prompt_text),
+    temperature=0.8,
+    top_p=1,
+    frequency_penalty=0,
+    presence_penalty=0
+    )
+
 st.text('Output:')
 
 option = st.selectbox(
@@ -50,21 +69,18 @@ if option == 'Chad':
     st.button('Generate')
     st.markdown(response1["choices"][0]["text"]*1)
 
-response2 = openai.Completion.create(
-    engine="davinci-instruct-beta-v3",
-    max_tokens=500,
-    prompt="Expand the prompt text Playboy response.\n\n {}".format(prompt_text),
-    temperature=0.8,
-    top_p=1,
-    frequency_penalty=0,
-    presence_penalty=0
-    )
-st.text('Output:')
 if option == 'PlayBoy':
     email = st.text_input(label="PlayBoy")
     st.text('Yo!!')
     st.button('Generate')
     st.markdown(response2["choices"][0]["text"]*1)
+
+if option == 'Denk':
+    email = st.text_input(label="PlayBoy")
+    st.text('Yo!!')
+    st.button('Generate')
+    st.markdown(response2["choices"][0]["text"]*1)
+
 
 
 
