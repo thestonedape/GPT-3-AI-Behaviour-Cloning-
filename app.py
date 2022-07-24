@@ -76,15 +76,18 @@ st.sidebar.title('Behavioral Cloning')
 st.sidebar.text('Choose a behaviour to clone:')
 response_type = st.sidebar.selectbox('Behaviour types', ['Default', 'Denk', 'CowBoy', 'Philosopher'])
 
-if response_type == 'Default':
-    st.markdown(response0.choices[0].text)
-elif response_type == 'Denk':
-    st.markdown(response1.choices[0].text)
-elif response_type == 'CowBoy':
-    st.markdown(response2.choices[0].text)
-elif response_type == 'Philosopher':
-    st.markdown(response3.choices[0].text)
-else:
-    st.markdown('Please select a behaviour to clone.')
+if st.button('Generate'):
+  if response_type == 'Default':
+     st.markdown(response0.choices[0].text)
+  elif response_type == 'Denk':
+     st.markdown(response1.choices[0].text)
+  elif response_type == 'CowBoy':
+     st.markdown(response2.choices[0].text)
+  elif response_type == 'Philosopher':
+     st.markdown(response3.choices[0].text)
+  else:
+     st.markdown('Please select a behaviour to clone.')
+
+
 
 
