@@ -39,7 +39,6 @@ response0 = openai.Completion.create(
     frequency_penalty=0,
     presence_penalty=0
     )
-st.text('Output:')
 
 response1 = openai.Completion.create(
     engine="davinci-instruct-beta-v3",
