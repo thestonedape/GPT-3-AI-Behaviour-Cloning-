@@ -93,7 +93,7 @@ if st.button('Generate'):
      st.markdown(response2.choices[0].text)
   elif response_type == 'Philosopher':
      st.markdown(response3.choices[0].text)
-  elif response_type == 'Poem' :
+  elif response_type == 'Poet' :
      st.markdown(response4.choices[0].text)   
   else:
      st.markdown('Please select a behaviour to clone.')
