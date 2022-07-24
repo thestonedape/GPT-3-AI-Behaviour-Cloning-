@@ -29,6 +29,18 @@ st.caption('Backed by [Inside Labs](https://insidelibrary.weebly.com/)')
 st.markdown('This is an experiment of prompt designing by using GPT-3(A Transformer based model), a neural network trained and hosted by OpenAI.')
 st.caption('Tips: Try to ask specific detaied questions, like "Who are you?"')
 prompt_text = st.text_input(label="Input" , value="Ask me anything!")
+
+response0 = openai.Completion.create(
+    engine="davinci-instruct-beta-v3",
+    max_tokens=500,
+    prompt="Expand the prompt text in to a detailed philosophical and creative explanation.\n\n {}".format(prompt_text),
+    temperature=0.8,
+    top_p=1,
+    frequency_penalty=0,
+    presence_penalty=0
+    )
+st.text('Output:')
+
 response1 = openai.Completion.create(
     engine="davinci-instruct-beta-v3",
     max_tokens=500,
@@ -62,24 +74,17 @@ st.text('Output:')
 #sidebar
 st.sidebar.title('Behavioral Cloning')
 st.sidebar.text('Choose a behaviour to clone:')
-response_type = st.sidebar.selectbox('Response type', ['Full response', 'Playful response', 'Roasting response'])
+response_type = st.sidebar.selectbox('Behaviour types', ['Default', 'Denk', 'CowBoy', 'Philosopher'])
 
-
-
-option = st.selectbox(
-     'Choose the behaviour of Stoned Ape.',
-     ('Chad', 'PlayBoy', 'Denk'))
-
-if st.button('Generate'):
-    if option == 'Chad':
-        st.markdown(response1.choices[0].text)
-    elif option == 'PlayBoy':
-        st.markdown(response2.choices[0].text)
-    elif option == 'Denk':
-        st.markdown(response3.choices[0].text)
-    else:
-        st.markdown('Please select an option.')
-
-
+if response_type == 'Default':
+    st.markdown(response0.choices[0].text)
+elif response_type == 'Denk':
+    st.markdown(response1.choices[0].text)
+elif response_type == 'CowBoy':
+    st.markdown(response2.choices[0].text)
+elif response_type == 'Philosopher':
+    st.markdown(response3.choices[0].text)
+else:
+    st.markdown('Please select a behaviour to clone.')
 
 
