@@ -67,6 +67,15 @@ response3 = openai.Completion.create(
     frequency_penalty=0,
     presence_penalty=0
     )
+response4 = openai.Completion.create(
+    engine="davinci-instruct-beta-v3",
+    max_tokens=500,
+    prompt="create a long poem from the prompt text.\n\n {}".format(prompt_text),
+    temperature=0.8,
+    top_p=1,
+    frequency_penalty=0,
+    presence_penalty=0
+    )
 
 st.text('Output:')
 
