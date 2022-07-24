@@ -70,7 +70,7 @@ response3 = openai.Completion.create(
 response4 = openai.Completion.create(
     engine="davinci-instruct-beta-v3",
     max_tokens=500,
-    prompt="create a long poem from the prompt text.\n\n {}".format(prompt_text),
+    prompt="Create a long poem with rhyme scheme AB from the prompt text.\n\n {}".format(prompt_text),
     temperature=0.8,
     top_p=1,
     frequency_penalty=0,
@@ -82,7 +82,7 @@ st.text('Output:')
 #sidebar
 st.sidebar.title('Behavioral Cloning')
 st.sidebar.text('Choose a behaviour to clone:')
-response_type = st.sidebar.selectbox('Behaviour types', ['Default', 'Denk', 'CowBoy', 'Philosopher', 'Poem'])
+response_type = st.sidebar.selectbox('Behaviour types', ['Default', 'Denk', 'CowBoy', 'Philosopher', 'Poet'])
 
 if st.button('Generate'):
   if response_type == 'Default':
