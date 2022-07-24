@@ -59,6 +59,12 @@ response3 = openai.Completion.create(
 
 st.text('Output:')
 
+#sidebar
+st.sidebar.title('Behavioral Cloning')
+st.sidebar.text('Choose a behaviour to clone:')
+response_type = st.sidebar.selectbox('Response type', ['Full response', 'Playful response', 'Roasting response'])
+
+
 
 option = st.selectbox(
      'Choose the behaviour of Stoned Ape.',
