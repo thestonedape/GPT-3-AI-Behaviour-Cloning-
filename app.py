@@ -20,7 +20,6 @@ openai.api_key = st.secrets["SECRET_KEY"]
 
 
 
-
         
 st.title('The Stoned Ape')
 st.caption('Still in development.')
