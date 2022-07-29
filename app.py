@@ -29,6 +29,12 @@ st.caption('Backed by [Inside Labs](https://insidelibrary.weebly.com/)')
 st.markdown('This is an experiment of prompt designing by using GPT-3(A Transformer based model), a neural network trained and hosted by OpenAI.')
 st.caption('Tips: Try to ask specific detaied questions, like "Who are you?"')
 prompt_text = st.text_input(label="Input" , value="Ask me anything!")
+#button for voice input
+if st.button('Voice Input'):
+    prompt_text = st.voice_input(label="Input")
+
+
+
 
 response0 = openai.Completion.create(
     engine="davinci-instruct-beta-v3",
@@ -97,7 +103,5 @@ if st.button('Generate'):
      st.markdown(response4.choices[0].text)   
   else:
      st.markdown('Please select a behaviour to clone.')
-
-
 
 
