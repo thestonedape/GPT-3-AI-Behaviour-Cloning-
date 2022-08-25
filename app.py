@@ -89,7 +89,7 @@ response_type = st.sidebar.selectbox('Behaviour types', ['Default', 'Denk', 'Cow
 
 if st.button('Generate'):
   if response_type == 'Default':
-     st.markdown(response0.choices[0].text)
+     st.text(response0.choices[0].text)
   elif response_type == 'Denk':
      st.markdown(response1.choices[0].text)
   elif response_type == 'CowBoy':
