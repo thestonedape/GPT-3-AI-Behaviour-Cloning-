@@ -21,7 +21,7 @@ openai.api_key = st.secrets["SECRET_KEY"]
 
 
         
-st.title('The Stoned Ape')
+st.title('Behaviour Cloning')
 st.caption('Still in development.')
 st.caption('Backed by [Inside Labs](https://insidelibrary.weebly.com/)')
 
